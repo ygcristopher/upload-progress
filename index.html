@@ -5,8 +5,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-   
-    <script src="main.js"></script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +12,7 @@
     
     <title>Upload Component</title>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="main.js"></script>
 
 </head>
 <body>
@@ -21,11 +20,33 @@
         <section class="drag-files">
             <i class="ph ph-cloud-arrow-up"></i>
 
-
             <h3>Importe seus arquivos</h3>
             <p>Arraste ou clique para fazer upload</p>
 
             <input type="file">
+        </section>
+        <section class="files">
+            <div class="box uploading">
+                <div class="icon">
+                    <i class="ph ph-file"></i>
+                </div>
+                <div class="info">
+                    <div class="filename">
+                        image.png
+                    </div>
+                    <div class="filesize">
+                        <span>30 MB / </span>
+                        <span>70 MB</span>
+                    </div>
+                    <div class="bar"></div>
+                    <progress value="45" max="100"></progress>
+                    <span>46%</span>
+                </div>
+                <div class="action"></div>
+            </div>
+            <div class="box done"></div>
+            <div class="box error"></div>
+
         </section>
     </div>
 </body>

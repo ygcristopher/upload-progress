@@ -7,3 +7,5 @@ dropArea.addEventListener('dragover', () => {
 dropArea.addEventListener('dragleave', () => {
     dropArea.classList.remove('dragover')
 })
+
+console.log('Hello World')

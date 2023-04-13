@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -12,15 +13,18 @@ html, body {
 
 #app {
     min-height: 100vh;
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 440px;
+    width: 90%;
+    margin: auto;
 }
 
 .drag-files {
     background: #F3F0FF;
     border: 1px dashed #C1b2Fa;
     border-radius: 8px;
-    width: 440px;
 
     text-align: center;
     padding: 28px 0 32px;
@@ -54,4 +58,58 @@ html, body {
 
 .drag-files.dragover {
     background: #ebe6ff;
+}
+
+.files {
+    margin-top: 20px;
+    display: grid;
+    gap: 12px;
+}
+
+.box {
+    padding: 8px;
+    width: 440px;
+    background: #ffffff;
+    box-shadow: 0px 4px 16px #Eae2fd;
+    border-radius: 8px;
+
+    display: flex;
+    gap: 12px;
+
+    --icon-bg: #eee
+    --icon-color: #aaa;
+    --progress-color: black;
+    --progress-text: #999
+}
+
+.box .icon {
+    background: var(--icon-bg);
+    border-radius: 4px;
+
+    padding: 16px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .icon i {
+    font-size: 24px;
+    color: var(--icon-color);
+}
+
+.box .info {
+    flex: 1;
+}
+
+.info .filename {
+    font-size: 14px;
+    font-weight: 700;
+    color: #575361;
+}
+
+.info .filesize {
+    color: #857e95;
+    font-weight: 500;
+    font-size: 12px;
 }
